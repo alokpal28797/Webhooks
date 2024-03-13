@@ -63,6 +63,7 @@ app.post('/api/event-emulate', (req, res) => {
                             'x-secret': secret
                         }
                     })
+                    console.log("🚀 ~ setTimeout ~ res:", res)
                 } catch (error) {
                     console.log("🚀 ~ setTimeout ~ error:", error)
 
@@ -87,5 +88,5 @@ app.get('/api/db', (req, res) => {
 })
 
 
-mongoose.connect('mongodb://0.0.0.0:27017/short-url').then(() => console.log(`MongoDB connection established`));
+// mongoose.connect('mongodb://0.0.0.0:27017/short-url').then(() => console.log(`MongoDB connection established`));
 app.listen(PORT, () => console.log(`The port is running at ${PORT}`))

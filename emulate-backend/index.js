@@ -8,7 +8,8 @@ const message = []
 app.post('/git-info', (req, res) => {
     try {
         const data = req.body;
-
+        console.log("🚀 ~ app.post ~ data:", data)
+        
         message.push(data);
         res.sendStatus(200);
     } catch (error) {
